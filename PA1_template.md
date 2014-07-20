@@ -64,16 +64,7 @@ Make a time series plot of the 5-minute interval and the average number of steps
 ```r
 step_interval <- aggregate(steps ~ interval, FUN = mean, 
                            data = step_total, na.rm = T)
-plot(step_interval$interval, step_interval$steps, data = step_interval, type ="l")
-```
-
-```
-## Warning: "data" is not a graphical parameter
-## Warning: "data" is not a graphical parameter
-## Warning: "data" is not a graphical parameter
-## Warning: "data" is not a graphical parameter
-## Warning: "data" is not a graphical parameter
-## Warning: "data" is not a graphical parameter
+plot(step_interval$interval, step_interval$steps, xlab = "", ylab = "Number of steps", type ="l")
 ```
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
